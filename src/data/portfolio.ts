@@ -1,5 +1,5 @@
 export const portfolio = {
-  name: "Md. Faruq Abdullah Rafi",
+  name: "Md. Faruq Abdullah",
   alias: "rafidev",
   tagline: "Full-Stack Engineer · Builder · Problem Solver",
   logo: "R",
