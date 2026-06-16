@@ -12,9 +12,6 @@ export default function Footer() {
             © {new Date().getFullYear()} {portfolio.name}. All rights reserved.
           </span>
         </div>
-        <p className="text-sm text-zinc-600">
-          Built with Next.js & Framer Motion
-        </p>
       </div>
     </footer>
   );
