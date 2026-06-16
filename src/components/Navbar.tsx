@@ -25,6 +25,24 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (!href.startsWith("#")) return;
+    e.preventDefault();
+    setMobileOpen(false);
+    const id = href.slice(1);
+    const scroll = () => {
+      if (!id) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+    setTimeout(scroll, 120);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -34,7 +52,11 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#" className="group flex items-center gap-3">
+        <a
+          href="#"
+          onClick={(e) => handleNavClick(e, "#")}
+          className="group flex items-center gap-3"
+        >
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-sm font-bold text-white shadow-lg shadow-violet-500/25 transition-transform group-hover:scale-105">
             {portfolio.logo}
           </span>
@@ -46,6 +68,7 @@ export default function Navbar() {
             <li key={link.href}>
               <a
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className="rounded-lg px-3 py-2 text-sm text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
               >
                 {link.label}
@@ -56,6 +79,7 @@ export default function Navbar() {
 
         <a
           href="#contact"
+          onClick={(e) => handleNavClick(e, "#contact")}
           className="hidden rounded-full bg-white px-5 py-2 text-sm font-medium text-black transition-transform hover:scale-105 sm:block"
         >
           Get in touch
@@ -84,7 +108,7 @@ export default function Navbar() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={(e) => handleNavClick(e, link.href)}
                     className="block rounded-lg px-3 py-2.5 text-sm text-zinc-300 hover:bg-white/5 hover:text-white"
                   >
                     {link.label}
@@ -94,7 +118,7 @@ export default function Navbar() {
               <li className="pt-2">
                 <a
                   href="#contact"
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleNavClick(e, "#contact")}
                   className="block rounded-full bg-white px-5 py-2.5 text-center text-sm font-medium text-black"
                 >
                   Get in touch

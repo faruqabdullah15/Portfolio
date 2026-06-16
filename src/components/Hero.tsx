@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
-import profilePic from "@/data/profile.jpeg";
+import profilePic from "@/data/propic.jpeg";
 import SocialLinks from "./SocialLinks";
 
 export default function Hero() {
@@ -26,11 +26,11 @@ export default function Hero() {
           <Image
             src={profilePic}
             alt={portfolio.name}
-            width={176}
-            height={176}
+            width={200}
+            height={200}
             priority
             placeholder="blur"
-            className="h-36 w-36 rounded-full object-cover shadow-2xl shadow-violet-500/30 ring-4 ring-violet-500/30 sm:h-44 sm:w-44"
+            className="h-40 w-40 rounded-full object-cover shadow-2xl shadow-violet-500/30 ring-4 ring-violet-500/30 sm:h-[200px] sm:w-[200px]"
           />
         </motion.div>
 

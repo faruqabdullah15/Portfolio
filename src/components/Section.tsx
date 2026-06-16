@@ -10,7 +10,7 @@ type SectionProps = {
 
 export default function Section({ id, title, subtitle, children, className = "" }: SectionProps) {
   return (
-    <section id={id} className={`px-6 py-20 md:py-28 ${className}`}>
+    <section id={id} className={`scroll-mt-20 px-6 py-20 md:py-28 ${className}`}>
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 md:mb-16">
           <p className="mb-2 text-sm font-medium uppercase tracking-[0.15em] text-violet-400">
