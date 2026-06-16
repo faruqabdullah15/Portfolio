@@ -23,7 +23,13 @@ export const portfolio = {
     {
       degree: "Higher Secondary Certificate (Science)",
       institution: "Dhaka College, Dhaka",
-      period: "2018 – 2019",
+      period: "2018",
+      details: "GPA: 5.00/5.00 ",
+    },
+    {
+      degree: "Secondary School Certificate (Science)",
+      institution: "Motijheel Ideal School & College, Dhaka",
+      period: "2016",
       details: "GPA: 5.00/5.00 ",
     },
   ],
