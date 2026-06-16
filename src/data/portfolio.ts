@@ -1,8 +1,8 @@
 export const portfolio = {
   name: "Md. Faruq Abdullah",
-  alias: "rafidev",
+  alias: "faruq_abdullah",
   tagline: "Full-Stack Engineer · Builder · Problem Solver",
-  logo: "R",
+  logo: "FA",
   shortDescription:
     "I'm a software engineer passionate about crafting elegant, performant digital experiences. I love turning complex problems into intuitive products — from scalable backends to polished user interfaces. When I'm not coding, you'll find me contributing to open source, or exploring emerging tech.",
   email: "faruqabdullah1512@gmail.com",

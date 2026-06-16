@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowDown, MapPin } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
+import profilePic from "@/data/profile.jpeg";
 import SocialLinks from "./SocialLinks";
 
 export default function Hero() {
@@ -19,19 +21,18 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-8 inline-flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 text-3xl font-bold text-white shadow-2xl shadow-violet-500/30"
+          className="mb-8 inline-flex"
         >
-          {portfolio.logo}
+          <Image
+            src={profilePic}
+            alt={portfolio.name}
+            width={176}
+            height={176}
+            priority
+            placeholder="blur"
+            className="h-36 w-36 rounded-full object-cover shadow-2xl shadow-violet-500/30 ring-4 ring-violet-500/30 sm:h-44 sm:w-44"
+          />
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1, duration: 0.6 }}
-          className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-violet-400"
-        >
-          {portfolio.alias}
-        </motion.p>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
