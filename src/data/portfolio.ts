@@ -149,7 +149,7 @@ export const portfolio = {
     "Technical Writing",
     "Photography",
     "Video Games",
-    "Hiking",
+    "Cooking",
   ],
 };
 
