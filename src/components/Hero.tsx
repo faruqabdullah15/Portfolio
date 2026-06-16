@@ -23,15 +23,17 @@ export default function Hero() {
           transition={{ duration: 0.5 }}
           className="mb-8 inline-flex"
         >
-          <Image
-            src={profilePic}
-            alt={portfolio.name}
-            width={200}
-            height={200}
-            priority
-            placeholder="blur"
-            className="h-40 w-40 rounded-full object-cover shadow-2xl shadow-violet-500/30 ring-4 ring-violet-500/30 sm:h-[200px] sm:w-[200px]"
-          />
+          <div className="relative h-40 w-40 overflow-hidden rounded-full shadow-2xl shadow-violet-500/30 ring-4 ring-violet-500/30 sm:h-[200px] sm:w-[200px]">
+            <Image
+              src={profilePic}
+              alt={portfolio.name}
+              fill
+              priority
+              placeholder="blur"
+              sizes="200px"
+              className="translate-x-2 scale-110 object-cover object-center"
+            />
+          </div>
         </motion.div>
 
         <motion.h1
