@@ -85,6 +85,16 @@ export const portfolio = {
       "Framer Motion",
     ],
   },
+  // Your GitHub username — public repos are auto-fetched into the Projects section.
+  githubUsername: "faruqabdullah15",
+  // ⛔ To HIDE a project from your portfolio, add its GitHub repo URL
+  //    (or just the repo name) to this list. Everything else shows automatically.
+  excludedProjects: [
+    "https://github.com/faruqabdullah15/Portfolio",
+    // "https://github.com/faruqabdullah15/some-private-demo",
+    // "my-test-repo",
+  ],
+  // Fallback projects — only used if the GitHub fetch fails (e.g. rate limit/offline).
   projects: [
     {
       title: "Cat-Dog-Image-Classifier",
